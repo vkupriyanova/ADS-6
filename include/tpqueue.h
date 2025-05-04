@@ -9,16 +9,17 @@ struct SYM {
 
 template<typename T>
 class TPQueue {
-    private:
+  private:
   struct Node {
     T data;
     Node* next;
   };
+
   public:
     TPQueue() : head(nullptr) {}
 
-  ~TPQueue() {
-    while (head) {
+    ~TPQueue() {
+      while (head) {
       Node* tempp = head;
       head = head->next;
       delete tempp;
