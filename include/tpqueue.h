@@ -9,13 +9,13 @@ struct SYM {
 
 template<typename T>
 class TPQueue {
-  private:
+    private:
   struct Node {
     T data;
     Node* next;
   };
- public:
-  TPQueue() : head(nullptr) {}
+  public:
+    TPQueue() : head(nullptr) {}
 
   ~TPQueue() {
     while (head) {
@@ -34,8 +34,8 @@ void push(const T& value) {
       while (currentt->next && currentt->next->data.prior >= value.prior) {
         currentt = currentt->next;
       }
-      newNode->next =currentt->next;
-      currentt->next =newNode;
+      newNode->next = currentt->next;
+      currentt->next = newNode;
     }
   }
 T pop() {
