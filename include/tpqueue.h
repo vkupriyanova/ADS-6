@@ -20,7 +20,6 @@ class TPQueue {
   Node* head;
 
  public:
-
   TPQueue() : head(nullptr) {}
 
   ~TPQueue() {
